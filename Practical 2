@@ -6,7 +6,7 @@ receiveissue().Write a program to find how many copies of the given books  are o
 display  total sale of  publication . */
 package prac;
 import java.util.Scanner;
-public class main {
+public class main {            //create a class name main.java
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         publication technical = new publication();
@@ -59,7 +59,7 @@ public class main {
         }
     }
 }
-public class publication {
+public class publication {        //create a new class name publication.java
     String title;
     public int price;
     public int copy;
@@ -83,7 +83,7 @@ public class publication {
         return orders;
     }
 }
-	public class Book extends publication{
+	public class Book extends publication{     //create a new class name Book.java
 	    private String author;
 	    public Book() {
 	    }
@@ -127,7 +127,7 @@ public class publication {
 	        return orders;
 	    }
 	}
-public class Magzine extends publication {
+public class Magzine extends publication {      //create a new class name Magzine.java
     public Magzine() {
         super();
     }
@@ -174,7 +174,7 @@ public class Magzine extends publication {
         return current;
     }
     public void receivedIssue(int current) {
-        Scanner sc = new Scanner(System.in)
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter total received copies of " + this.title);
         int received = sc.nextInt();
         sc.nextLine();  // Consume the newline left-over
