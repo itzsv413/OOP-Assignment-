@@ -1,0 +1,35 @@
+package prac;
+import java.util.*;
+
+public class Complex{
+	int a;
+	int b;
+	int c;
+	int d;
+	practice(){
+		System.out.println("This is program to calculate sum opf two complex number");
+	}
+	void accept() {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		this.d = d;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter real part of first number:");
+		this.a = sc.nextInt();
+		System.out.print("Enter imaginery part of first number:");
+		this.b = sc.nextInt();
+		System.out.print("Enter real part of second number:");
+		this.c = sc.nextInt();
+		System.out.print("Enter imaginery part of second number:");
+		this.d = sc.nextInt();
+	}
+	void display() {
+		System.out.print("Sum of complex number is"+(a+b)+"+"+(c+d)+"i");
+	}
+	public static void main(String args[]) {
+		practice p = new practice();
+		p.accept();
+		p.display();
+	}
+}
