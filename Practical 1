@@ -10,7 +10,7 @@ public class Complex{
 	int c;
 	int d;
 	Complex(){    //default constructors
-		System.out.println("This is program to calculate sum opf two complex number");
+		System.out.println("This is program to calculate sum of two complex number");
 	}
     Complex(int a,int b,int c,int d){  // Parameterized constructor
             this.a=a;
