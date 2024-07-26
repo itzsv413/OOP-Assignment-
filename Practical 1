@@ -30,10 +30,10 @@ public class Complex{
 		this.d = sc.nextInt();
 	}
 	void display() {
-		System.out.print("Sum of complex number is"+(a+b)+"+"+(c+d)+"i");
+		System.out.print("Sum of complex number is:"+(a+b)+"+"+(c+d)+"i");
 	}
 	public static void main(String args[]) {
-		Complex C = new Complex();
+		Complex C = new Complex();   //object creation
 		C.accept();
 		C.display();
 	}
