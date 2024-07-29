@@ -1,0 +1,293 @@
+//PROGRAM
+/*
+ Create Employee class hasEmp_name, Emp_id, Address, Mail_id, and Mobile_noas 
+members. Inherit the classes: Programmer, Team Lead, Assistant Project Manager and Project 
+Manager from employee class. Add Basic Pay (BP) as the member of all the inherited classes 
+with 97% of BP as DA, 10 % of BP as HRA, 12% of BP as PF, 0.1% of BP for staff club fund. 
+Generate pay slips for the employees with their gross and net salary.
+*/
+package prac;
+import java.util.*;
+abstract class Empolyee{
+ String name;
+ int mobile=10;
+ int id=6;
+ String address;
+ String mail_id;
+ abstract void getData();
+ abstract void display();
+}
+class Programmer extends Empolyee{
+ Scanner s=new Scanner(System.in);
+ double gross,net,BP, da=97, hra=10,pf=12,scf=0.1;
+ @Override
+ void getData() {
+	 System.out.println("Enter ID of programmer: ");
+	 id=s.nextInt();
+	 System.out.println("Enter the name of programmer: ");
+	 name=s.next();
+	 System.out.println("Enter Mobile no. of programmer: ");
+	 mobile= s.nextInt();
+	 System.out.println("Enter Address  of programmer: ");
+	 address=s.next();
+	 System.out.println("Enter email id of programmer: ");
+	 mail_id=s.next();
+	 System.out.println("Enter Basic Pay no. of programmer: ");
+	 BP= s.nextInt();
+ }
+ public void calulate_salary(){
+ gross=BP+(BP*(da+hra))/100;
+ net=gross-(BP*(pf+scf))/100;
+ }
+ @Override
+ void display() {
+	 System.out.println("ID of programmer: "+id);
+	 System.out.println("Name of Programmer: "+name);
+	 System.out.println("Mobile no. of programmer: "+mobile);
+	 System.out.println("Address of programmer: "+address);
+	 System.out.println("Email id of programmer: "+mail_id);
+	 System.out.println("Dearness allowance of programmer: "+(BP*da)/100);
+	 System.out.println("Home rent allowance of programmer :"+(BP*hra)/100);
+	 System.out.println("Providant fund of programmer :"+(BP*pf)/100);
+	 System.out.println("Staff club fund for programmer is "+(BP*scf)/100+"\n");
+	 System.out.println("Gross Salary of programmer is "+gross);
+	 System.out.println("Net salary of programmer is "+net);
+	 System.out.println("--------------------------------------------------------");
+ 	}
+}
+class Team_Leader extends Empolyee{
+ Scanner s=new Scanner(System.in);
+ double gross,net,BP,da=97,hra=10,pf=12,scf=0.1;
+ @Override
+ void getData() {
+	 System.out.println("Enter ID of Team Leader: ");
+	 id=s.nextInt();
+	 System.out.println("Enter name of team leader: ");
+	 name=s.next();
+	 System.out.println("Enter mobile no. of team leader: ");
+	 mobile=s.nextInt();
+	 System.out.println("Enter Address  of team leader: ");
+	 address=s.next();
+	 System.out.println("Enter email id of team leader: ");
+	 mail_id=s.next();
+	 System.out.println("Enter basic number of team leader: ");
+	 BP=s.nextInt();
+ }
+ public void calculate_salary(){
+ gross=BP+(BP*(da+hra))/100;
+ net=gross-(BP*(pf+scf))/100;
+ }
+ 
+ @Override
+ void display() {
+	 System.out.println("ID of team leader: "+id);
+	 System.out.println("Name of Team leader: "+name);
+	 System.out.println("Mobile no. of Team leader: "+mobile);
+	 System.out.println("Address of team leader: "+address);
+	 System.out.println("Email id of team leader: "+mail_id);
+	 System.out.println("Dearness allowance of Team leader: "+(BP*da)/100);
+	 System.out.println("Home rent allowance of team leader: "+(BP*hra)/100);
+	 System.out.println("Providant fund of team leader: "+(BP*pf)/100);
+	 System.out.println("Staff club fund of team leader is"+(BP*scf)/100+"\n");
+	 System.out.println("Gross salary of team leader: "+gross);
+	 System.out.println("Net salary of team leader: "+net);
+	 System.out.println("--------------------------------------------------------");
+ 	}
+}
+class Assistant_Project_Manager extends Empolyee{
+Scanner s=new Scanner(System.in);
+	double gross,net,BP,da=97,hra=10,pf=12,scf=0.1;
+	@Override
+	void getData() {
+		 System.out.println("Enter ID of Assiant project manager: ");
+		 id=s.nextInt();
+		 System.out.println("Enter name of Assiant project manager: ");
+		 name=s.next();
+		 System.out.println("Enter mobile no. of Assiant project manager: ");
+		 mobile=s.nextInt();
+		 System.out.println("Enter Address  of Assiant project manager: ");
+		 address=s.next();
+		 System.out.println("Enter email id of Assiant project manager: ");
+		 mail_id=s.next();
+		 System.out.println("Enter basic number of Assiant project manager: ");
+		 BP=s.nextInt();
+	 }
+	 public void calculate_salary(){
+	 gross=BP+(BP*(da+hra))/100;
+	 net=gross-(BP*(pf+scf))/100;
+	 }
+	 
+	 @Override
+	 void display() {
+		 System.out.println("ID of Assiant project manager: "+id);
+		 System.out.println("Name of Assiant project manager: "+name);
+		 System.out.println("Mobile no. of Assiant project manager: "+mobile);
+		 System.out.println("Address of Assiant project manager: "+address);
+		 System.out.println("Email id of Assiant project manager: "+mail_id);
+		 System.out.println("Dearness allowance of Assiant project manager: "+(BP*da)/100);
+		 System.out.println("Home rent allowance of Assiant project manager: "+(BP*hra)/100);
+		 System.out.println("Providant fund of Assiant project manager: "+(BP*pf)/100);
+		 System.out.println("Staff club fund of Assiant project manager is"+(BP*scf)/100+"\n");
+		 System.out.println("Gross salary of Assiant project manager: "+gross);
+		 System.out.println("Net salary of Assiant project manager: "+net);
+		 System.out.println("--------------------------------------------------------");
+	 	}
+}
+class Project_manager extends Empolyee{
+	Scanner s=new Scanner(System.in);
+	double gross,net,BP,da=97,hra=10,pf=12,scf=0.1;
+	@Override
+	void getData() {
+		 System.out.println("Enter ID of project manager: ");
+		 id=s.nextInt();
+		 System.out.println("Enter name of project manager: ");
+		 name=s.next();
+		 System.out.println("Enter mobile no. of project manager: ");
+		 mobile=s.nextInt();
+		 System.out.println("Enter Address  of project manager: ");
+		 address=s.next();
+		 System.out.println("Enter email id of project manager: ");
+		 mail_id=s.next();
+		 System.out.println("Enter basic number of project manager: ");
+		 BP=s.nextInt();
+	 }
+	 public void calculate_salary(){
+	 gross=BP+(BP*(da+hra))/100;
+	 net=gross-(BP*(pf+scf))/100;
+	 }
+	 
+	 @Override
+	 void display() {
+		 System.out.println("ID of project manager: "+id);
+		 System.out.println("Name of project manager: "+name);
+		 System.out.println("Mobile no. of project manager: "+mobile);
+		 System.out.println("Address of project manager: "+address);
+		 System.out.println("Email id of project manager: "+mail_id);
+		 System.out.println("Dearness allowance of project manager: "+(BP*da)/100);
+		 System.out.println("Home rent allowance of project manager: "+(BP*hra)/100);
+		 System.out.println("Providant fund of project manager: "+(BP*pf)/100);
+		 System.out.println("Staff club fund of project manager is"+(BP*scf)/100+"\n");
+		 System.out.println("Gross salary of project manager: "+gross);
+		 System.out.println("Net salary of project manager: "+net);
+		 System.out.println("--------------------------------------------------------");
+	 	}
+}
+public class Main {
+ public static void main(String[] args) {
+ Programmer p=new Programmer();
+ Team_Leader t=new Team_Leader();
+ Assistant_Project_Manager A=new Assistant_Project_Manager();
+ Project_manager M=new Project_manager();
+ p.getData();
+ t.getData();
+ A.getData();
+ M.getData();
+ p.calulate_salary();
+ p.display();
+ t.calculate_salary();
+ t.display();
+ A.calculate_salary();
+ A.display();
+ M.calculate_salary();
+ M.display();
+ }
+}
+//output 
+Enter ID of programmer: 
+12
+Enter the name of programmer: 
+sachin
+Enter Mobile no. of programmer: 
+123456789
+Enter Address  of programmer: 
+MOshi
+Enter email id of programmer: 
+sv@gmail.com
+Enter Basic Pay no. of programmer: 
+100000
+Enter ID of Team Leader: 
+32
+Enter name of team leader: 
+Pravin
+Enter mobile no. of team leader: 
+3456782
+Enter Address  of team leader: 
+Pune
+Enter email id of team leader: 
+pr@gmail.com
+Enter basic number of team leader: 
+200000
+Enter ID of Assiant project manager: 
+345
+Enter name of Assiant project manager: 
+om
+Enter mobile no. of Assiant project manager: 
+987654321
+Enter Address  of Assiant project manager: 
+Kerala
+Enter email id of Assiant project manager: 
+Enter basic number of Assiant project manager: 
+10000
+Enter ID of project manager: 
+123
+Enter name of project manager: 
+omkar
+Enter mobile no. of project manager: 
+12345678
+Enter Address  of project manager: 
+Ghar
+Enter email id of project manager: 
+Enter basic number of project manager: 
+2000000
+ID of programmer: 12
+Name of Programmer: sachin
+Mobile no. of programmer: 123456789
+Address of programmer: MOshi
+Email id of programmer: sv@gmail.com
+Dearness allowance of programmer: 97000.0
+Home rent allowance of programmer :10000.0
+Providant fund of programmer :12000.0
+Staff club fund for programmer is 100.0
+
+Gross Salary of programmer is 207000.0
+Net salary of programmer is 194900.0
+--------------------------------------------------------
+ID of team leader: 32
+Name of Team leader: Pravin
+Mobile no. of Team leader: 3456782
+Address of team leader: Pune
+Email id of team leader: pr@gmail.com
+Dearness allowance of Team leader: 194000.0
+Home rent allowance of team leader: 20000.0
+Providant fund of team leader: 24000.0
+Staff club fund of team leader is200.0
+
+Gross salary of team leader: 414000.0
+Net salary of team leader: 389800.0
+--------------------------------------------------------
+ID of Assiant project manager: 345
+Name of Assiant project manager: om
+Mobile no. of Assiant project manager: 987654321
+Address of Assiant project manager: Kerala
+Email id of Assiant project manager: 
+Dearness allowance of Assiant project manager: 9700.0
+Home rent allowance of Assiant project manager: 1000.0
+Providant fund of Assiant project manager: 1200.0
+Staff club fund of Assiant project manager is10.0
+
+Gross salary of Assiant project manager: 20700.0
+Net salary of Assiant project manager: 19490.0
+--------------------------------------------------------
+ID of project manager: 123
+Name of project manager: omkar
+Mobile no. of project manager: 12345678
+Address of project manager: Ghar
+Email id of project manager: 
+Dearness allowance of project manager: 1940000.0
+Home rent allowance of project manager: 200000.0
+Providant fund of project manager: 240000.0
+Staff club fund of project manager is2000.0
+
+Gross salary of project manager: 4140000.0
+Net salary of project manager: 3898000.0
+--------------------------------------------------------
