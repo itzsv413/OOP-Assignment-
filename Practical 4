@@ -1,0 +1,53 @@
+package prac;
+import java.util.Scanner;
+abstract class shape {
+	double base;
+	double height;
+	public
+	abstract void accept();
+	abstract void compute_area();
+}
+class triangle extends shape
+{
+	public void accept() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter base of triangle");
+		base=sc.nextDouble();
+		System.out.println("Enter height of triangle");
+		height=sc.nextDouble();
+	}
+	public void compute_area()
+	{
+		System.out.println("Area of triangle is:"+(0.5*base*height));
+	}
+}
+class rectangle extends shape
+{
+	public void accept() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter length of rectangle");
+		base=sc.nextDouble();
+		System.out.println("Enter breadth of rectangle");
+		height=sc.nextDouble();
+	}
+	public void compute_area() {
+		System.out.println("Area of rectangle is:"+(base*height));
+	}
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("1.Calculate area of triangle");
+		System.out.println("2.Calculate area of rectangle");
+		System.out.println("Enter your Choice");
+		int choice =sc.nextInt();
+		switch(choice) {
+		case 1:shape t=new triangle();
+		t.accept();
+		t.compute_area();
+		break;
+		case 2:shape r=new rectangle();
+		r.accept();
+		r.compute_area();
+		break;
+		}
+	}
+}
