@@ -1,4 +1,4 @@
-//PROGRAM
+//Problem Statement
 /*
  Create Employee class hasEmp_name, Emp_id, Address, Mail_id, and Mobile_noas 
 members. Inherit the classes: Programmer, Team Lead, Assistant Project Manager and Project 
@@ -41,6 +41,7 @@ class Programmer extends Empolyee{
  }
  @Override
  void display() {
+	 System.out.println("----------------Programmer details--------------------");
 	 System.out.println("ID of programmer: "+id);
 	 System.out.println("Name of Programmer: "+name);
 	 System.out.println("Mobile no. of programmer: "+mobile);
@@ -50,6 +51,7 @@ class Programmer extends Empolyee{
 	 System.out.println("Home rent allowance of programmer :"+(BP*hra)/100);
 	 System.out.println("Providant fund of programmer :"+(BP*pf)/100);
 	 System.out.println("Staff club fund for programmer is "+(BP*scf)/100+"\n");
+	 System.out.println("--------------------Pay slip---------------------------");
 	 System.out.println("Gross Salary of programmer is "+gross);
 	 System.out.println("Net salary of programmer is "+net);
 	 System.out.println("--------------------------------------------------------");
@@ -70,7 +72,7 @@ class Team_Leader extends Empolyee{
 	 address=s.next();
 	 System.out.println("Enter email id of team leader: ");
 	 mail_id=s.next();
-	 System.out.println("Enter basic number of team leader: ");
+	 System.out.println("Enter basic pay number of team leader: ");
 	 BP=s.nextInt();
  }
  public void calculate_salary(){
@@ -80,6 +82,7 @@ class Team_Leader extends Empolyee{
  
  @Override
  void display() {
+	 System.out.println("-----------------Team leader details--------------------");
 	 System.out.println("ID of team leader: "+id);
 	 System.out.println("Name of Team leader: "+name);
 	 System.out.println("Mobile no. of Team leader: "+mobile);
@@ -89,6 +92,7 @@ class Team_Leader extends Empolyee{
 	 System.out.println("Home rent allowance of team leader: "+(BP*hra)/100);
 	 System.out.println("Providant fund of team leader: "+(BP*pf)/100);
 	 System.out.println("Staff club fund of team leader is"+(BP*scf)/100+"\n");
+	 System.out.println("--------------------Pay slip---------------------------");
 	 System.out.println("Gross salary of team leader: "+gross);
 	 System.out.println("Net salary of team leader: "+net);
 	 System.out.println("--------------------------------------------------------");
@@ -109,7 +113,7 @@ Scanner s=new Scanner(System.in);
 		 address=s.next();
 		 System.out.println("Enter email id of Assiant project manager: ");
 		 mail_id=s.next();
-		 System.out.println("Enter basic number of Assiant project manager: ");
+		 System.out.println("Enter basic pay number of Assiant project manager: ");
 		 BP=s.nextInt();
 	 }
 	 public void calculate_salary(){
@@ -119,6 +123,7 @@ Scanner s=new Scanner(System.in);
 	 
 	 @Override
 	 void display() {
+		 System.out.println("-----------Assiant project manager details---------------");
 		 System.out.println("ID of Assiant project manager: "+id);
 		 System.out.println("Name of Assiant project manager: "+name);
 		 System.out.println("Mobile no. of Assiant project manager: "+mobile);
@@ -128,6 +133,7 @@ Scanner s=new Scanner(System.in);
 		 System.out.println("Home rent allowance of Assiant project manager: "+(BP*hra)/100);
 		 System.out.println("Providant fund of Assiant project manager: "+(BP*pf)/100);
 		 System.out.println("Staff club fund of Assiant project manager is"+(BP*scf)/100+"\n");
+		 System.out.println("--------------------Pay slip---------------------------");
 		 System.out.println("Gross salary of Assiant project manager: "+gross);
 		 System.out.println("Net salary of Assiant project manager: "+net);
 		 System.out.println("--------------------------------------------------------");
@@ -148,7 +154,7 @@ class Project_manager extends Empolyee{
 		 address=s.next();
 		 System.out.println("Enter email id of project manager: ");
 		 mail_id=s.next();
-		 System.out.println("Enter basic number of project manager: ");
+		 System.out.println("Enter basic pay number of project manager: ");
 		 BP=s.nextInt();
 	 }
 	 public void calculate_salary(){
@@ -158,6 +164,7 @@ class Project_manager extends Empolyee{
 	 
 	 @Override
 	 void display() {
+		 System.out.println("----------------Project Manager details-----------------");
 		 System.out.println("ID of project manager: "+id);
 		 System.out.println("Name of project manager: "+name);
 		 System.out.println("Mobile no. of project manager: "+mobile);
@@ -167,6 +174,7 @@ class Project_manager extends Empolyee{
 		 System.out.println("Home rent allowance of project manager: "+(BP*hra)/100);
 		 System.out.println("Providant fund of project manager: "+(BP*pf)/100);
 		 System.out.println("Staff club fund of project manager is"+(BP*scf)/100+"\n");
+		 System.out.println("--------------------Pay slip---------------------------");
 		 System.out.println("Gross salary of project manager: "+gross);
 		 System.out.println("Net salary of project manager: "+net);
 		 System.out.println("--------------------------------------------------------");
@@ -192,104 +200,112 @@ public class Main {
  M.display();
  }
 }
-//output 
+//output
 Enter ID of programmer: 
-12
+123
 Enter the name of programmer: 
-sachin
+Sachin
 Enter Mobile no. of programmer: 
-123456789
+987654312
 Enter Address  of programmer: 
-MOshi
+Moshi
 Enter email id of programmer: 
 sv@gmail.com
 Enter Basic Pay no. of programmer: 
 100000
 Enter ID of Team Leader: 
-32
+321
 Enter name of team leader: 
-Pravin
+Om
 Enter mobile no. of team leader: 
-3456782
+123456789
 Enter Address  of team leader: 
-Pune
+Nagpur
 Enter email id of team leader: 
-pr@gmail.com
-Enter basic number of team leader: 
-200000
+Om@gmail.com
+Enter basic pay number of team leader: 
+20000
 Enter ID of Assiant project manager: 
-345
+134
 Enter name of Assiant project manager: 
-om
+Pravin
 Enter mobile no. of Assiant project manager: 
-987654321
+321456789
 Enter Address  of Assiant project manager: 
-Kerala
+Mumbai
 Enter email id of Assiant project manager: 
-om@gmail.com
-Enter basic number of Assiant project manager: 
-10000
+Pr@gmail.com
+Enter basic pay number of Assiant project manager: 
+30000
 Enter ID of project manager: 
-123
+243
 Enter name of project manager: 
-omkar
+Saurabh
 Enter mobile no. of project manager: 
-12345678
+198273645
 Enter Address  of project manager: 
-Ghar
+UP
 Enter email id of project manager: 
-omkar@gmail.com
-Enter basic number of project manager: 
-2000000
-ID of programmer: 12
-Name of Programmer: sachin
-Mobile no. of programmer: 123456789
-Address of programmer: MOshi
+Sr@gmail.com
+Enter basic pay number of project manager: 
+100000
+----------------Programmer details--------------------
+ID of programmer: 123
+Name of Programmer: Sachin
+Mobile no. of programmer: 987654312
+Address of programmer: Moshi
 Email id of programmer: sv@gmail.com
 Dearness allowance of programmer: 97000.0
 Home rent allowance of programmer :10000.0
 Providant fund of programmer :12000.0
 Staff club fund for programmer is 100.0
 
+--------------------Pay slip---------------------------
 Gross Salary of programmer is 207000.0
 Net salary of programmer is 194900.0
 --------------------------------------------------------
-ID of team leader: 32
-Name of Team leader: Pravin
-Mobile no. of Team leader: 3456782
-Address of team leader: Pune
-Email id of team leader: pr@gmail.com
-Dearness allowance of Team leader: 194000.0
-Home rent allowance of team leader: 20000.0
-Providant fund of team leader: 24000.0
-Staff club fund of team leader is200.0
+-----------------Team leader details--------------------
+ID of team leader: 321
+Name of Team leader: Om
+Mobile no. of Team leader: 123456789
+Address of team leader: Nagpur
+Email id of team leader: Om@gmail.com
+Dearness allowance of Team leader: 19400.0
+Home rent allowance of team leader: 2000.0
+Providant fund of team leader: 2400.0
+Staff club fund of team leader is20.0
 
-Gross salary of team leader: 414000.0
-Net salary of team leader: 389800.0
+--------------------Pay slip---------------------------
+Gross salary of team leader: 41400.0
+Net salary of team leader: 38980.0
 --------------------------------------------------------
-ID of Assiant project manager: 345
-Name of Assiant project manager: om
-Mobile no. of Assiant project manager: 987654321
-Address of Assiant project manager: Kerala
-Email id of Assiant project manager: 
-Dearness allowance of Assiant project manager: 9700.0
-Home rent allowance of Assiant project manager: 1000.0
-Providant fund of Assiant project manager: 1200.0
-Staff club fund of Assiant project manager is10.0
+-----------Assiant project manager details---------------
+ID of Assiant project manager: 134
+Name of Assiant project manager: Pravin
+Mobile no. of Assiant project manager: 321456789
+Address of Assiant project manager: Mumbai
+Email id of Assiant project manager: Pr@gmail.com
+Dearness allowance of Assiant project manager: 29100.0
+Home rent allowance of Assiant project manager: 3000.0
+Providant fund of Assiant project manager: 3600.0
+Staff club fund of Assiant project manager is30.0
 
-Gross salary of Assiant project manager: 20700.0
-Net salary of Assiant project manager: 19490.0
+--------------------Pay slip---------------------------
+Gross salary of Assiant project manager: 62100.0
+Net salary of Assiant project manager: 58470.0
 --------------------------------------------------------
-ID of project manager: 123
-Name of project manager: omkar
-Mobile no. of project manager: 12345678
-Address of project manager: Ghar
-Email id of project manager: 
-Dearness allowance of project manager: 1940000.0
-Home rent allowance of project manager: 200000.0
-Providant fund of project manager: 240000.0
-Staff club fund of project manager is2000.0
+----------------Project Manager details-----------------
+ID of project manager: 243
+Name of project manager: Saurabh
+Mobile no. of project manager: 198273645
+Address of project manager: UP
+Email id of project manager: Sr@gmail.com
+Dearness allowance of project manager: 97000.0
+Home rent allowance of project manager: 10000.0
+Providant fund of project manager: 12000.0
+Staff club fund of project manager is100.0
 
-Gross salary of project manager: 4140000.0
-Net salary of project manager: 3898000.0
+--------------------Pay slip---------------------------
+Gross salary of project manager: 207000.0
+Net salary of project manager: 194900.0
 --------------------------------------------------------
