@@ -1,3 +1,9 @@
+//Problem Statement
+/*Design a base class shape with two double type values and member functions to input
+the data and compute_area() for calculating area of figure. Derive two classes’ triangle and rectangle. Make
+compute_area() as abstract function and redefine this function in the derived class to suit their requirements.
+Write a program that accepts dimensions of triangle/rectangle and display calculated area. Implement
+dynamic binding for given case study.*/
 package prac;
 import java.util.Scanner;
 abstract class shape {
@@ -40,14 +46,31 @@ class rectangle extends shape
 		System.out.println("Enter your Choice");
 		int choice =sc.nextInt();
 		switch(choice) {
-		case 1:shape t=new triangle();
+		case 1:shape t=new triangle();//dynamic binding
 		t.accept();
 		t.compute_area();
 		break;
-		case 2:shape r=new rectangle();
+		case 2:shape r=new rectangle();//dynamic binding
 		r.accept();
 		r.compute_area();
 		break;
 		}
 	}
 }
+//output
+1.Calculate area of triangle
+2.Calculate area of rectangle
+Enter your Choice
+1
+Enter base of triangle
+3
+Enter height of triangle
+2
+Area of triangle is:3.0
+Enter your Choice
+2
+Enter length of rectangle
+3
+Enter breadth of rectangle
+4
+Area of rectangle is:12.0
