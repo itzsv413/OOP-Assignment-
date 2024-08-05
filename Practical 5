@@ -1,0 +1,106 @@
+/*Design and develop a context for given case study and implement an interface for Vehicles
+Consider the example of vehicles like bicycle, car and bike. All Vehicles have common
+functionalities such as Gear Change, Speed up and apply breaks. Make an interface and put all
+these common functionalities. Bicycle, Bike, Car classes should be implemented for all these
+functionalities in their own class in their own way.*/
+package prac5;
+import java.util.*;
+interface Vehicle{
+	void accept();
+	void Gear_change();
+	void Speed_up();
+	void Breaks();
+	void display();
+}
+class Bicylce implements Vehicle{
+	String name;
+	Scanner sc=new Scanner(System.in);
+	public void accept() {
+		System.out.println("Enter name of Bicycle");
+		name=sc.nextLine();
+	}
+	public void display() {
+		System.out.println("Name of bicycle:"+name);
+	}
+	public void Gear_change() {
+		int gear;
+		System.out.println("What gear would you like to switch?");
+		gear=sc.nextInt();
+		System.out.println("gear is changed of bicycle by:"+gear);
+	}
+	public void Speed_up() {
+		System.out.println("Speed is increase of bicycle");
+	}
+	public void Breaks() {
+		System.out.println("Speed is decrease of bicycle");
+	}
+}
+class Bike implements Vehicle{
+	String name;
+	Scanner sc=new Scanner(System.in);
+	public void accept() {
+		System.out.println("Enter name of Bike");
+		name=sc.nextLine();
+	}
+	public void display() {
+		System.out.println("Name of Bike:"+name);
+	}
+	public void Gear_change() {
+		int gear;
+		System.out.println("What gear would you like to switch?");
+		gear=sc.nextInt();
+		System.out.println("gear is changed of bike by:"+gear);
+	}
+	public void Speed_up() {
+		System.out.println("Speed is increase of bike");
+	}
+	public void Breaks() {
+		System.out.println("Speed is decrease of bike");
+	}
+}
+class car implements Vehicle{
+	String name;
+	Scanner sc=new Scanner(System.in);
+	public void accept() {
+		System.out.println("Enter name of car");
+		name=sc.nextLine();
+	}
+	public void display() {
+		System.out.println("Name of car:"+name);
+	}
+	public void Gear_change() {
+		int gear;
+		System.out.println("What gear would you like to switch?");
+		gear=sc.nextInt();
+		System.out.println("gear is changed of car by:"+gear);
+	}
+	public void Speed_up() {
+		System.out.println("Speed is increase of car");
+	}
+	public void Breaks() {
+		System.out.println("Speed is decrease of car");
+	}
+}
+class Main {
+	public static void main(String args[]) {
+		Bicylce b=new Bicylce();
+		Bike bi=new Bike();
+		car c=new car();
+		b.accept();
+		b.Gear_change();
+		b.display();
+		b.Speed_up();
+		b.Breaks();
+		bi.accept();
+		bi.Gear_change();
+		bi.display();
+		bi.Speed_up();
+		bi.Breaks();
+		c.accept();
+		c.Gear_change();
+		c.display();
+		c.Speed_up();
+		c.Breaks();
+	}
+
+}
