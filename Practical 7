@@ -1,0 +1,50 @@
+/*Implement a generic program using any collection class to count the number of elements in a
+collection that have a specific property such as even numbers, odd number, prime number and
+palindromes.*/
+package assingment;
+import java.util.*;
+public class Number <T extends Number>{
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter numbers:");
+		int n=sc.nextInt();
+	    ArrayList<Integer> a=new ArrayList<Integer>();
+	    ArrayList<Integer> b=new ArrayList<Integer>();
+	    ArrayList<Integer> c=new ArrayList<Integer>();
+	    ArrayList<Integer> d=new ArrayList<Integer>();
+	    for(int i=1;i<n;i++) {
+	    	if(i%2==0) {
+	    		a.add(i);
+	    	}
+	    	else {
+	    		b.add(i);
+	    	}
+	    }
+	    System.out.println("Even numbers are:"+a);
+	    System.out.println("Total Even numbers are:"+a.size());
+	    System.out.println("Odd numbers are:"+b);
+	    System.out.println("Total Odd numbers are:"+b.size());
+	    System.out.println("Enter numbers:");
+	    int k=sc.nextInt();
+	    for(int i=0;i<k;i++) {
+	    	int rev=k;
+	    	while(k!=0) {
+	    		int rem=k%10;
+	    		rev=rev*10+rem;
+	    		k/=10;
+	    	}
+	    	if(k==rev) {
+	    		c.add(i);
+	    	}
+	    	else {
+	    		d.add(i);
+	    	}
+	    }
+	    System.out.println("Palindrome numbers are:"+c);
+	    System.out.println("Total Palindrome numbers are:"+c.size());
+	    System.out.println("Non palindrome numbers are:"+d);
+	    System.out.println("Total non palindrome numbers are:"+d.size());
+	
+	}
+
+}
