@@ -27,3 +27,15 @@ public class prac6 {
 		}
 	}
 }
+//output
+Enter first Number:
+2
+Enter Second Number:
+0
+You Should not divide number by zero
+-----------------------------------------------------
+Enter first Number:
+2.2
+Enter Second Number:
+2
+throw Number format exception
