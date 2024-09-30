@@ -1,130 +1,280 @@
-/*Design and develop a context for given case study and implement an interface for Vehicles
-Consider the example of vehicles like bicycle, car and bike. All Vehicles have common
-functionalities such as Gear Change, Speed up and apply breaks. Make an interface and put all
-these common functionalities. Bicycle, Bike, Car classes should be implemented for all these
-functionalities in their own class in their own way.*/
-package prac5a;
+/*Design and develop a context for given case study and implement an interface for vehicle consider the example of vehicle like bicycle car bike all  
+ * all vehicles have common fuctionalities such as gear change speed up and apply brakes.
+ * 
+ */
+package exp5;
 import java.util.*;
-interface Vehicle{
-	void accept();
-	void Gear_change();
-	void Speed_up();
-	void Breaks();
-	void display();
+interface Vehicle
+{
+	void current_cond();
+	void gear_change();
+	void speed_up();
+	void apply_brakes();	
 }
-class Bicylce implements Vehicle{
-	int speed;
+class Bicycle implements Vehicle
+{
 	int gear;
-	String name;
-	Scanner sc=new Scanner(System.in);
-	public void accept() {
-		System.out.println("Enter name of Bicycle");
-		name=sc.nextLine();
-	}
-	public void display() {
-		System.out.println("Name of bicycle:"+name);
-	}
-	public void Gear_change() {
-		gear=gear+1;
-		System.out.println("Gear of bicycle:"+gear);
-	}
-	public void Speed_up() {
-		speed=0;
-		System.out.println("Speed of bicycle:"+speed+5+"km/hr");
-	}
-	public void Breaks() {
-		speed=0;
-		System.out.println("speed and gear is:"+speed);
-	}
-}
-class Bike implements Vehicle{
 	int speed;
-	int gear;
-	String name;
 	Scanner sc=new Scanner(System.in);
-	public void accept() {
-		System.out.println("Enter name of Bike");
-		name=sc.nextLine();
-	}
-	public void display() {
-		System.out.println("Name of bike:"+name);
-	}
-	public void Gear_change() {
-		gear=gear+1;
-		System.out.println("Gear of bike:"+gear);
-	}
-	public void Speed_up() {
+	public void current_cond()
+	{
+		gear=0;
 		speed=0;
-		System.out.println("Speed of bike:"+speed+5+"km/hr");
+		System.out.println("Current gear of Bicycle:"+gear);
+		System.out.println("Current speed of Bicycle:"+speed+" km/hr");
 	}
-	public void Breaks() {
-		speed=0;
-		System.out.println("speed and gear is:"+speed);
-	}
-}
-class car implements Vehicle{
-	int speed;
-	int gear;
-	String name;
-	Scanner sc=new Scanner(System.in);
-	public void accept() {
-		System.out.println("Enter name of car");
-		name=sc.nextLine();
-	}
-	public void display() {
-		System.out.println("Name of car:"+name);
-	}
-	public void Gear_change() {
-		gear=gear+1;
-		System.out.println("Gear of car:"+gear);
-	}
-	public void Speed_up() {
-		speed=0;
-		System.out.println("Speed of car:"+speed+40+"km/hr");
-	}
-	public void Breaks() {
-		speed=0;
-		System.out.println("speed and gear is"+speed);
-	}
-}
-class Main {
-	public static void main(String args[]) {
-		Scanner sc=new Scanner(System.in);
-		Bicylce b=new Bicylce();
-		Bike bi=new Bike();
-		car c=new car();
-		System.out.println("1.vehical name\n2.gear change\t3.speed up\t\n4.Apply brakes");
-		System.out.println("Enter your choice");
-		int choice=sc.nextInt();
-		switch(choice)
+	public void gear_change()
+	{
+		System.out.println("What gear do u want of bicycle?(1-6):");
+		gear=sc.nextInt();
+		if(gear<=6)
 		{
-		case 1:
-			b.accept();
-			bi.accept();
-			c.accept();
-			b.display();
-			bi.display();
-			c.display();
-			break;
-		case 2:
-			b.Gear_change();
-			bi.Gear_change();
-			c.Gear_change();
-			break;
-		case 3:
-			b.Speed_up();
-			bi.Speed_up();
-			c.Speed_up();
-			break;
-		case 4:
-			b.Breaks();
-			bi.Breaks();
-			c.Breaks();
-			break;
-		default:
-			System.out.println("Invalid Input");
+		   System.out.println("Gear of bicycle changed to"+gear);
+		}
+		else
+		{
+			System.out.println("Invalid choice");
 		}
 	}
+	public void speed_up()
+	{
+		int speed1=10;
+		int speed2=20;
+		int speed3=30;
+		int speed4=40;
+		int speed5=50;
+		int speed6=60;
+		switch(gear)
+		{
+		case 1:
+			System.out.println("Speed of bicylce is:"+speed1+"km/hr");
+			break;
+		case 2:
+			System.out.println("Speed of bicylce is:"+speed2+"km/hr");
+			break;
+		case 3:
+			System.out.println("Speed of bicylce is:"+speed3+"km/hr");
+			break;
+		case 4:
+			System.out.println("Speed of bicylce is:"+speed4+"km/hr");
+			break;
+		case 5:
+			System.out.println("Speed of bicylce is:"+speed5+"km/hr");
+			break;
+		case 6:
+			System.out.println("Speed of bicylce is:"+speed6+"km/hr");
+			break;
+		default:
+			System.out.println("Invalid choice");
+		}
+	}
+	public void apply_brakes()
+	{
+		int gear=0;
+		int speed=0;
+		System.out.println("Gear of bicylce is:"+gear);
+		System.out.println("Speed of bicylce is:"+speed+"km/hr");
+	}
+}
+class Bike implements Vehicle
+{
+	int gear;
+	int speed;
+	Scanner sc=new Scanner(System.in);
+	public void current_cond()
+	{
+		gear=0;
+		speed=0;
+		System.out.println("Current gear of Bike:"+gear);
+		System.out.println("Current speed of Bike:"+speed+" km/hr");
+		
+	}
+	public void gear_change()
+	{
+		System.out.println("What gear do u want of bike?(1-6):");
+		gear=sc.nextInt();
+		if(gear<=6)
+		{
+		   System.out.println("Gear of bike changed to"+gear);
+		}
+		else
+		{
+			System.out.println("Invalid choice");
+		}
+	}
+	public void speed_up()
+	{
+		int speed1=10;
+		int speed2=30;
+		int speed3=60;
+		int speed4=80;
+		int speed5=120;
+		switch(gear)
+		{
+		case 1:
+			System.out.println("Speed of bike is:"+speed1+"km/hr");
+			break;
+		case 2:
+			System.out.println("Speed of bike is:"+speed2+"km/hr");
+			break;
+		case 3:
+			System.out.println("Speed of bike is:"+speed3+"km/hr");
+			break;
+		case 4:
+			System.out.println("Speed of bike is:"+speed4+"km/hr");
+			break;
+		case 5:
+			System.out.println("Speed of bike is:"+speed5+"km/hr");
+			break;
+		default:
+			System.out.println("Invalid choice");
+		}
+	}
+	public void apply_brakes()
+	{
+		int gear=0;
+		int speed=0;
+		System.out.println("Gear of bike is:"+gear);
+		System.out.println("Speed of bike is:"+speed+"km/hr");
+	}
+}
+class Car implements Vehicle
+{
+	int gear;
+	int speed;
+	Scanner sc=new Scanner(System.in);
+	public void current_cond()
+	{
+		gear=0;
+		speed=0;
+		System.out.println("Current gear of car:"+gear);
+		System.out.println("Current speed of car:"+speed+" km/hr");
+		
+	}
+	public void gear_change()
+	{
+		System.out.println("What gear do u want of car?(1-6):");
+		gear=sc.nextInt();
+		if(gear<=6)
+		{
+		   System.out.println("Gear of car changed to"+gear);
+		}
+		else
+		{
+			System.out.println("Invalid choice");
+		}
+	}
+	public void speed_up()
+	{
+		int speed1=20;
+		int speed2=40;
+		int speed3=60;
+		int speed4=100;
+		int speed5=140;
+		switch(gear)
+		{
+		case 1:
+			System.out.println("Speed of car is:"+speed1+"km/hr");
+			break;
+		case 2:
+			System.out.println("Speed of car is:"+speed2+"km/hr");
+			break;
+		case 3:
+			System.out.println("Speed of car is:"+speed3+"km/hr");
+			break;
+		case 4:
+			System.out.println("Speed of car is:"+speed4+"km/hr");
+			break;
+		case 5:
+			System.out.println("Speed of car is:"+speed5+"km/hr");
+			break;
+		default:
+			System.out.println("Invalid choice");
+		}
+	}
+	public void apply_brakes()
+	{
+		int gear=0;
+		int speed=0;
+		System.out.println("Gear of car is:"+gear);
+		System.out.println("Speed of car is:"+speed+"km/hr");
+	}
+}
+public class Main {
+
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+	Vehicle b=new Bicycle();
+	Vehicle bi=new Bike();
+	Vehicle c=new Car();
+	System.out.println("1.Bicylce\n2.Bike\n3.Car");
+	System.out.println("Which Vehicle do you want to choose?:");
+	int choice=sc.nextInt();
+	do {
+	switch(choice)
+	{
+	case 1:
+		System.out.println("1.Current condition of Bicycle\n2.Gear and Speed up of Bicylce\n3.Apply Brakes");
+		System.out.println("What do u want to perform?:");
+		int choice1=sc.nextInt();
+		switch(choice1)
+		{
+		case 1:
+			b.current_cond();
+			break;
+		case 2:
+			b.gear_change();
+			b.speed_up();
+			break;
+		case 3:
+			b.apply_brakes();
+			break;
+		default:
+			System.out.println("Invalid choice");
+		}
+		break;
+	case 2:
+		System.out.println("1.Current condition of Bike\n2.Gear and Speed up of Bike\n3.Apply Brakes");
+		System.out.println("What do u want to perform?:");
+		int choice2=sc.nextInt();
+		switch(choice2)
+		{
+		case 1:
+			bi.current_cond();
+			break;
+		case 2:
+			bi.gear_change();
+			bi.speed_up();
+			break;
+		case 3:
+			bi.apply_brakes();
+			break;
+		default:
+			System.out.println("Invalid choice");
+	    }
+		break;
+	case 3:
+		System.out.println("1.Current condition of car\n2.Gear and Speed up of car\n3.Apply Brakes");
+		System.out.println("What do u want to perform?:");
+		int choice3=sc.nextInt();
+		switch(choice3)
+		{
+		case 1:
+			c.current_cond();
+			break;
+		case 2:
+			c.gear_change();
+			c.speed_up();
+			break;
+		case 3:
+			c.apply_brakes();
+			break;
+		default:
+			System.out.println("Invalid choice");
+        }
+		break;
+	}
+	}while(choice!=3);
+  }
 
 }
-
